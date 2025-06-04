@@ -9,7 +9,7 @@ export default function AuthLayout({
     <div className="flex min-h-svh w-full">
       <div className="hidden md:flex relative md:w-1/2">
         <Image
-          src="/auth-image.jpeg"
+          src="/quill-banner-1.jpg"
           alt="Auth illustration"
           fill
           className="object-cover"
