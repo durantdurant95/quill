@@ -1,17 +1,31 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { createClient } from "@/lib/supabase/client";
+import { signOut } from "@/lib/supabase/auth";
+import { LogOut } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { toast } from "sonner";
+import { DropdownMenuItem } from "../ui/dropdown-menu";
 
-export function LogoutButton() {
+export default function LogoutButton() {
+  const [isLoggingOut, setIsLoggingOut] = useState(false);
   const router = useRouter();
-
-  const logout = async () => {
-    const supabase = createClient();
-    await supabase.auth.signOut();
-    router.push("/auth/login");
+  const logout = () => {
+    setIsLoggingOut(true);
+    toast.promise(signOut(), {
+      loading: "Logging out...",
+      success: () => {
+        router.push("/auth/login");
+        return "Successfully logged out!";
+      },
+      error: "Failed to logout. Please try again.",
+    });
+    setIsLoggingOut(false);
   };
-
-  return <Button onClick={logout}>Logout</Button>;
+  return (
+    <DropdownMenuItem onClick={logout} disabled={isLoggingOut}>
+      <LogOut />
+      Log out
+    </DropdownMenuItem>
+  );
 }
