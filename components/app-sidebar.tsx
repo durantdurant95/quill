@@ -1,6 +1,7 @@
-import { Command, MoreHorizontal } from "lucide-react";
+import { MoreHorizontal } from "lucide-react";
 import * as React from "react";
 
+import { QuillIcon } from "@/components/quill-icon";
 import { SidebarUserMenu } from "@/components/sidebar-user-menu";
 import {
   Sidebar,
@@ -18,19 +19,9 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
     <Sidebar variant="inset" {...props}>
       <SidebarHeader>
         <SidebarMenu>
-          <SidebarMenuItem>
-            <SidebarMenuButton size="lg" asChild>
-              <a href="#">
-                <div className="bg-sidebar-primary text-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg">
-                  <Command className="size-4" />
-                </div>
-                <div className="grid flex-1 text-left text-sm leading-tight">
-                  <span className="truncate font-medium">Acme Inc</span>
-                  <span className="truncate text-xs">Enterprise</span>
-                </div>
-              </a>
-            </SidebarMenuButton>
-          </SidebarMenuItem>
+          <div className="p-2 text-primary">
+            <QuillIcon size={50} />
+          </div>
         </SidebarMenu>
       </SidebarHeader>
       <SidebarContent>
