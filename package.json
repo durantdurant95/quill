@@ -5,12 +5,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "db:push": "drizzle-kit push",
-    "db:generate": "drizzle-kit generate",
-    "db:migrate": "drizzle-kit migrate"
+    "gen-types": "supabase gen types typescript --project-id cgochsoqtijcsmnsrdqk > supabase/database.types.ts"
   },
   "dependencies": {
-    "@hookform/resolvers": "^5.0.1",
+    "@hookform/resolvers": "^5.1.1",
     "@radix-ui/react-avatar": "^1.1.10",
     "@radix-ui/react-checkbox": "^1.3.2",
     "@radix-ui/react-collapsible": "^1.1.11",
@@ -24,28 +22,26 @@
     "@supabase/supabase-js": "latest",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "drizzle-orm": "^0.44.2",
     "lucide-react": "^0.511.0",
     "next": "latest",
     "next-themes": "^0.4.6",
-    "postgres": "^3.4.7",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-hook-form": "^7.57.0",
     "sonner": "^2.0.5",
-    "tailwind-merge": "^3.3.0",
-    "zod": "^3.25.56"
+    "tailwind-merge": "^3.3.1",
+    "zod": "^3.25.58"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
     "@tailwindcss/postcss": "^4.1.8",
-    "@types/node": "^20.17.57",
-    "@types/react": "^19.1.6",
+    "@types/node": "^20.19.0",
+    "@types/react": "^19.1.7",
     "@types/react-dom": "^19.1.6",
-    "drizzle-kit": "^0.31.1",
     "eslint": "^9.28.0",
     "eslint-config-next": "15.3.1",
     "postcss": "^8.5.4",
+    "supabase": "^2.24.3",
     "tailwindcss": "^4.1.8",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "^5.8.3"
