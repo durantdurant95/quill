@@ -19,8 +19,10 @@ import {
   Bell,
   ChevronsUpDown,
   CreditCard,
+  Settings,
   Sparkles,
 } from "lucide-react";
+import Link from "next/link";
 import LogoutButton from "./auth/logout-button";
 
 export async function SidebarUserMenu() {
@@ -94,6 +96,12 @@ export async function SidebarUserMenu() {
               <DropdownMenuItem>
                 <BadgeCheck />
                 Account
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link href="/settings">
+                  <Settings className="mr-2 h-4 w-4" />
+                  Settings
+                </Link>
               </DropdownMenuItem>
               <DropdownMenuItem>
                 <CreditCard />

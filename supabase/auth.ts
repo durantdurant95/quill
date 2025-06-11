@@ -102,3 +102,15 @@ export const onAuthStateChange = (
   const supabase = createClient();
   return supabase.auth.onAuthStateChange(callback);
 };
+
+/**
+ * Update user metadata
+ */
+export const updateUserMetadata = async (metadata: Record<string, any>) => {
+  const supabase = createClient();
+  const { data, error } = await supabase.auth.updateUser({
+    data: metadata,
+  });
+  if (error) throw error;
+  return data;
+};
