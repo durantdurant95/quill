@@ -22,8 +22,8 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { signInWithPassword } from "@/lib/supabase/auth";
 import { cn } from "@/lib/utils";
+import { signInWithPassword } from "@/supabase/auth";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 

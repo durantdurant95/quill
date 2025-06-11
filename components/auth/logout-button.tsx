@@ -1,6 +1,6 @@
 "use client";
 
-import { signOut } from "@/lib/supabase/auth";
+import { signOut } from "@/supabase/auth";
 import { LogOut } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";

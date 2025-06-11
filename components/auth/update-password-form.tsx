@@ -22,8 +22,8 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { updatePassword } from "@/lib/supabase/auth";
 import { cn } from "@/lib/utils";
+import { updatePassword } from "@/supabase/auth";
 import { useRouter } from "next/navigation";
 
 const FormSchema = z

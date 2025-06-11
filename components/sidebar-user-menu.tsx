@@ -13,7 +13,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
-import { getUser } from "@/lib/supabase/server";
+import { getUser } from "@/supabase/server";
 import {
   BadgeCheck,
   Bell,
