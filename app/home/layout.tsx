@@ -1,4 +1,5 @@
 import { AppSidebar } from "@/components/app-sidebar";
+import { BreadcrumbNav } from "@/components/breadcrumb-nav";
 import { ThemeSwitcher } from "@/components/theme-switcher";
 import { Separator } from "@/components/ui/separator";
 import {
@@ -23,6 +24,7 @@ export default function HomeLayout({
               orientation="vertical"
               className="data-[orientation=vertical]:h-5"
             />
+            <BreadcrumbNav />
           </div>
           <div className="flex items-center gap-1">
             <ThemeSwitcher />

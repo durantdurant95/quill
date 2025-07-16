@@ -55,10 +55,11 @@ export function ProfileForm({ user }: ProfileFormProps) {
       startTransition(() => {
         router.refresh();
       });
-    } catch (error: any) {
+    } catch (error: unknown) {
       setMessage({
         type: "error",
-        text: error.message || "Failed to update profile",
+        text:
+          error instanceof Error ? error.message : "Failed to update profile",
       });
     } finally {
       setIsLoading(false);
