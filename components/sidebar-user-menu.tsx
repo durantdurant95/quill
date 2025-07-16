@@ -14,14 +14,7 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 import { getUser } from "@/supabase/server";
-import {
-  BadgeCheck,
-  Bell,
-  ChevronsUpDown,
-  CreditCard,
-  Settings,
-  Sparkles,
-} from "lucide-react";
+import { BadgeCheck, ChevronsUpDown, Settings, Sparkles } from "lucide-react";
 import Link from "next/link";
 import LogoutButton from "./auth/logout-button";
 
@@ -86,7 +79,7 @@ export async function SidebarUserMenu() {
             </DropdownMenuLabel>
             <DropdownMenuSeparator />
             <DropdownMenuGroup>
-              <DropdownMenuItem>
+              <DropdownMenuItem disabled>
                 <Sparkles />
                 Upgrade to Pro
               </DropdownMenuItem>
@@ -99,17 +92,9 @@ export async function SidebarUserMenu() {
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
                 <Link href="/settings">
-                  <Settings className="mr-2 h-4 w-4" />
+                  <Settings />
                   Settings
                 </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <CreditCard />
-                Billing
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Bell />
-                Notifications
               </DropdownMenuItem>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
