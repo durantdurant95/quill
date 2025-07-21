@@ -19,7 +19,7 @@ const navigationItems = [
   {
     title: "Home",
     icon: Home,
-    href: "/",
+    href: "/home",
   },
   {
     title: "Explore",

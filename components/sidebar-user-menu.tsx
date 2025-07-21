@@ -91,7 +91,7 @@ export async function SidebarUserMenu() {
                 Account
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link href="/settings">
+                <Link href="/home/settings">
                   <Settings />
                   Settings
                 </Link>
