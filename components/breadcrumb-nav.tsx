@@ -44,9 +44,9 @@ export function BreadcrumbNav() {
     <Breadcrumb className="pl-1.5 sm:pl-2.5">
       <BreadcrumbList>
         {breadcrumbItems.map((item, index) => (
-          <div key={item.path}>
+          <div key={item.path} className="flex items-center gap-1.5 sm:gap-2.5">
             {index > 0 && <BreadcrumbSeparator key={`separator-${index}`} />}
-            <BreadcrumbItem key={item.path}>
+            <BreadcrumbItem>
               {item.isLast ? (
                 <BreadcrumbPage>{item.name}</BreadcrumbPage>
               ) : (
